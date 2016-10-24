@@ -6,7 +6,7 @@ var Obj = {
 
 	var x = JSON.stringify(Obj);
 	console.log(x)
-	makeRequest("recieve.js", usrName)
+	makeRequest("recieve.js", "Alena")
 
 	function makeRequest(url, usrName){			
 		httpRequest = new XMLHttpRequest();
