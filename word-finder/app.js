@@ -1,6 +1,12 @@
+
 var sjw = [/injustice/gi, /postmodern/gi, /inequality/gi, /inequity/gi, /Marx/gi, /diversity/gi, /multiculturalism/gi, /patriarchy/gi, /racism/gi, /sexism/gi, /cisgender/gi];
+
 var storage = [];
+
+var results = [];
+
 var elements = document.body.getElementsByTagName("*");
+
 for(i in elements){
 	try{	
 		storage.push(elements[i].lastChild.data)
@@ -14,15 +20,28 @@ for(i in elements){
 
 }
 
+var storage2 = storage.join();
 
+	for(x in sjw){
+		var scan = storage2.match(sjw[x]);
+			if(scan != null){
+				results.push(scan);	
+			}
+	}
 
-var readyToScan = storage.join();
+//function counter(word){
+//	var countTotal = 0;
+//	var count = 0;
+//	for(i in results2){
+//		countTotal++
+//		if(results2[i] === word){
+//			count++
+//		}
+//	}
+//	console.log("There are " + countTotal + " occurences of SJW buzzwords on this page");
+//	console.log(count + " occurences of " + word + " on this page")
+//}
 
-for(x in sjw){
-	var scan = readyToScan.match(sjw[x]);
-		if(scan != null){
-			console.log(scan)
-		}
-}
-
+var results2 = [].concat.apply([], results);
+console.log(results2)
 
