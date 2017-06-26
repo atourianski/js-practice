@@ -14,14 +14,12 @@ for(i in elements){
 	catch(err){
 		storage.push(elements[i].innerText)
 		if(elements[i].innerText === undefined){
-			console.log("well shit")	
 		}
 	}
 
 }
 
 var storage2 = storage.join();
-
 	for(x in sjw){
 		var scan = storage2.match(sjw[x]);
 			if(scan != null){
@@ -30,23 +28,32 @@ var storage2 = storage.join();
 	}
 
 function counter(word){
-	var countTotal = 0;
 	var count = 0;
 	for(i in results2){
-		countTotal++;
 		if(results2[i] == word){
 			count++
 		}
 	}
-	console.log("There are " + countTotal + " occurences of SJW buzzwords on this page");
-	
+		
 	if(count != 0){
 	console.log(count + " occurences of " + word + " on this page");
 	}
 	
 }
 
+function totalCounter(){
+	var totalCount = 0;
+
+		for (i in results2){
+			totalCount++
+		}
+	console.log("There are " + totalCount + " occurences of SJW buzzwords on this page");
+}
 
 var results2 = [].concat.apply([], results);
-console.log(results2);
-counter("postmodern")
+
+for (y in sjw){
+	counter(sjw[y].source)
+}
+
+totalCounter()
