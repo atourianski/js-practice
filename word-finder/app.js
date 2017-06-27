@@ -1,5 +1,5 @@
 
-var sjw = [/injustice/gi, /postmodern/gi, /inequality/gi, /inequity/gi, /Marx/gi, /diversity/gi, /multiculturalism/gi, /patriarchy/gi, /racism/gi, /sexism/gi, /cisgender/gi];
+var sjw = [/neoliberal/gi, /heteronormative/gi, /patriarchy/gi, /microagression/gi, /intersectional/gi, /misogyny/gi, /trigger/gi, /injustice/gi, /postmodern/gi, /inequality/gi, /inequity/gi, /Marx/gi, /diversity/gi, /multiculturalism/gi, /patriarchy/gi, /racism/gi, /sexism/gi, /cisgender/gi];
 
 var storage = [];
 
@@ -29,14 +29,19 @@ var storage2 = storage.join();
 
 function counter(word){
 	var count = 0;
-	for(i in results2){
-		if(results2[i] == word){
+		for(i in results2){
+		if(results2[i].toLowerCase() == word){
 			count++
-		}
+					}
 	}
 		
 	if(count != 0){
-	console.log(count + " occurences of " + word + " on this page");
+		if(count == 1){
+			console.log(word + " appears " + count + " time");
+		}
+		else{
+			console.log(word + " appears " + count + " times");
+		}
 	}
 	
 }
