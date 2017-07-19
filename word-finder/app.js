@@ -62,3 +62,36 @@ for (y in sjw){
 }
 
 totalCounter()
+
+//broken
+
+function addJquery(){
+var script = document.createElement('script');
+script.type = 'text/javascript';
+script.src = 'http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js';
+document.getElementsByTagName('body')[0].appendChild(script);
+}
+
+function addCode(){
+var code = document.createElement('script');
+code.type = 'text/javascript';
+code.innerHTML = "$(function() { alert('hi')})"
+document.getElementsByTagName('body')[0].appendChild(code);
+}
+
+addJquery();
+addCode();
+//var jquery = document.createElement('script');
+//jquery.type = 'text/javascript';
+//script.innerHTML = "$(function() { alert('hi') })";
+//document.getElementsByTagName('head')[0].appendChild(jquery);
+
+ 
+
+
+
+
+
+
+
+
