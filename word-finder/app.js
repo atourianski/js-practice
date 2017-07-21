@@ -1,9 +1,11 @@
 
-var sjw = [/neoliberal/gi, /heteronormative/gi, /patriarchy/gi, /microagression/gi, /intersectional/gi, /misogyny/gi, /trigger/gi, /injustice/gi, /postmodern/gi, /inequality/gi, /inequity/gi, /Marx/gi, /diversity/gi, /multiculturalism/gi, /patriarchy/gi, /racism/gi, /sexism/gi, /cisgender/gi];
+var sjw = [/neoliberal/gi, /heteronormative/gi, /patriarchy/gi, /microagression/gi, /intersectional/gi, /misogyny/gi, /trigger/gi, /injustice/gi, /postmodern/gi, /inequality/gi, /inequity/gi, /Marx/gi, /diversity/gi, /multiculturalism/gi, /patriarchy/gi, /racism/gi, /sexism/gi, /cisgender/gi, /decontruct/gi, /limn/gi, /problematize/gi, /commodification/gi];
 
 var storage = [];
 
 var results = [];
+
+var info = [];
 
 var elements = document.body.getElementsByTagName("*");
 
@@ -27,6 +29,16 @@ var storage2 = storage.join();
 			}
 	}
 
+function totalCounter(){
+	var totalCount = 0;
+
+		for (i in results2){
+			totalCount++
+		}
+	info.push("<b>There are " + totalCount + " occurences of SJW buzzwords on this page</b><br>");
+	
+}
+
 function counter(word){
 	var count = 0;
 		for(i in results2){
@@ -37,57 +49,34 @@ function counter(word){
 		
 	if(count != 0){
 		if(count == 1){
-			console.log(word + " appears " + count + " time");
+			info.push(word + " appears " + count + " time");
+			info.push("<br>")
 		}
 		else{
-			console.log(word + " appears " + count + " times");
+			info.push(word + " appears " + count + " times");
+			info.push("<br>")
 		}
 	}
 	
 }
 
-function totalCounter(){
-	var totalCount = 0;
-
-		for (i in results2){
-			totalCount++
-		}
-	console.log("There are " + totalCount + " occurences of SJW buzzwords on this page");
-}
 
 var results2 = [].concat.apply([], results);
+
+totalCounter()
 
 for (y in sjw){
 	counter(sjw[y].source)
 }
 
-totalCounter()
+var readyFormat = info.join("");
 
-//broken
-
-function addJquery(){
-var script = document.createElement('script');
-script.type = 'text/javascript';
-script.src = 'http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js';
-document.getElementsByTagName('body')[0].appendChild(script);
-}
-
-function addCode(){
-var code = document.createElement('script');
-code.type = 'text/javascript';
-code.innerHTML = "$(function() { alert('hi')})"
-document.getElementsByTagName('body')[0].appendChild(code);
-}
-
-addJquery();
-addCode();
-//var jquery = document.createElement('script');
-//jquery.type = 'text/javascript';
-//script.innerHTML = "$(function() { alert('hi') })";
-//document.getElementsByTagName('head')[0].appendChild(jquery);
+var opened = window.open('', '_blank', 'toolbar=0,location=0,menubar=0,height=500px,width=500px');
+opened.document.write("<html><head><title>MyTitle</title></head><body>" + 
+readyFormat
+ + "</body></html>");
 
  
-
 
 
 
