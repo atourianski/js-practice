@@ -1,5 +1,26 @@
+var btn = document.createElement("BUTTON");        
+btn.onclick = trigger;
+btn.style.background = 'yellow';
+btn.style.zIndex = '1000';
+btn.style.fontSize = 'large';
+btn.style.fontWeight = 'bolder';
+btn.style.height = '50px';
+btn.style.width = '300px';
+var t = document.createTextNode("Scan for Buzzwords");       
+btn.appendChild(t);                               
 
-var sjw = [/neoliberal/gi, /heteronormative/gi, /patriarchy/gi, /microagression/gi, /intersectional/gi, /misogyny/gi, /trigger/gi, /injustice/gi, /postmodern/gi, /inequality/gi, /inequity/gi, /Marx/gi, /diversity/gi, /multiculturalism/gi, /patriarchy/gi, /racism/gi, /sexism/gi, /cisgender/gi, /decontruct/gi, /limn/gi, /problematize/gi, /commodification/gi];
+function prependChild(parent, newFirstChild) {
+
+	var head = document.getElementsByTagName('head');
+	parent.insertBefore(newFirstChild, parent.firstChild)
+};
+
+prependChild(document.body, btn)
+
+function trigger(){
+
+
+var sjw = [/patriarchal/gi, /problematic/gi, /commodify/gi, /neoliberal/gi, /heteronormative/gi, /patriarchy/gi, /microagression/gi, /intersectional/gi, /misogyny/gi, /trigger/gi, /injustice/gi, /postmodern/gi, /inequality/gi, /inequity/gi, /Marx/gi, /diversity/gi, /multiculturalism/gi, /racism/gi, /sexism/gi, /cisgender/gi, /decontruct/gi, /limn/gi, /problematize/gi, /commodification/gi];
 
 var storage = [];
 
@@ -35,7 +56,7 @@ function totalCounter(){
 		for (i in results2){
 			totalCount++
 		}
-	info.push("<b>There are " + totalCount + " occurences of SJW buzzwords on this page</b><br>");
+	info.push("<div class='container-fluid'><div class='row'><div class='col-md-4'><span class='text-center'><h3><b>" + totalCount + " occurences of SJW buzzwords on this page</b></h3></span><br></div></div>");
 	
 }
 
@@ -49,11 +70,11 @@ function counter(word){
 		
 	if(count != 0){
 		if(count == 1){
-			info.push(word + " appears " + count + " time");
+			info.push("<div class='container-fluid'><div class='text-center'><b><span style='color:red'>" + word + "</span></b> appears " + count + " time" + "</div></div>");
 			info.push("<br>")
 		}
 		else{
-			info.push(word + " appears " + count + " times");
+			info.push("<div class='container-fluid'><div class='text-center'><b><span style='color:red'>" + word + "</span></b> appears " + count + " times" + "</div></div>");
 			info.push("<br>")
 		}
 	}
@@ -72,13 +93,12 @@ for (y in sjw){
 var readyFormat = info.join("");
 
 var opened = window.open('', '_blank', 'toolbar=0,location=0,menubar=0,height=500px,width=500px');
-opened.document.write("<html><head><title>MyTitle</title></head><body>" + 
+
+opened.document.write("<html><head><title>SJW buzzwords</title><link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css' integrity='sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u' crossorigin='anonymous'><link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css' integrity='sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp' crossorigin='anonymous'></head><body>" + 
 readyFormat
  + "</body></html>");
 
- 
-
-
+}
 
 
 
