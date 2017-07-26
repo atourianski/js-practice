@@ -2,8 +2,8 @@
 "name": "My Extension",
 "version": "0.1",
 "default_locale": "en",
-"description": "detect sjw buzzwords on a webpage",
-"author": "Alena Tourianski"
+"description": "A simple app that detects Neo-Marxist buzzwords on webpages",
+"author": "atourianski"
 
 content_scripts": [
   {

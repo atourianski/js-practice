@@ -25,7 +25,7 @@ function trigger(){
 
 //database of sjw buzzwords
 
-var sjw = [/transphobic/gi,/transphobia/gi, /ableism/gi, /priviledge/gi, /colonialism/gi, /toxic masculinity/gi,/patriarchal/gi, /problematic/gi, /commodify/gi, /neoliberal/gi, /heteronormative/gi, /patriarchy/gi, /microagression/gi, /intersectional/gi, /misogyny/gi, /trigger/gi, /injustice/gi, /postmodern/gi, /inequality/gi, /inequity/gi, /Marx/gi, /diversity/gi, /multiculturalism/gi, /racism/gi, /sexism/gi, /cisgender/gi, /intercultural/gi, /queer/gi, /decontruct/gi, /limn/gi, /problematize/gi, /commodification/gi];
+var sjw = [/social justice/gi,/transphobic/gi,/transphobia/gi,/ableist/gi, /ableism/gi, /priviledge/gi, /colonialism/gi, /toxic masculinity/gi,/patriarchal/gi, /problematic/gi, /pronoun/gi, /commodify/gi, /neoliberal/gi, /heteronormative/gi, /patriarchy/gi, /microagression/gi, /intersectional/gi, /mysogynist/gi, /interrelationship/gi, /feminist/gi, /feminism/gi, /misogyny/gi, /trigger/gi, /injustice/gi, /postmodern/gi, /inequality/gi, /inequity/gi, /Marx/gi, /diverse/gi, /sociocultural/gi, /sociopolitical/gi, /diversity/gi, /multiculturalism/gi, /racism/gi, /sexism/gi, /cisgender/gi, /intercultural/gi, /queer/gi, /decontruct/gi, /limn/gi, /problematize/gi, /commodification/gi];
 
 var rawPageData = []; 						  // contains all the text from all elements on a given page
 
