@@ -7,24 +7,25 @@ function day(D3, tumeric, bComplex, fish, Mag, vitC, vitE, iron, food, coffee, b
 	//date
 	this.xDay = "<h3 id = 'todaysDate'>" + new Date().toDateString() + "</h3>"
 	//supplements
-	this.D3 ="<p class = 'name'>Vitamin D3:</p>" + "<p class = 'value'>" + D3 +  "</p><br><br>"
-	this.tumeric ="<p class = 'name'>Tumeric:</p>" +  "<p class = 'value'>" +  tumeric  +  "</p><br><br>"
-	this.bComplex ="<p class = 'name'>B Complex:</p>" +  "<p class = 'value'>" + bComplex +  "</p><br><br>"
-	this.fish ="<p class = 'name'>Fish Oil</p>" +  "<p class = 'value'>" + fish +  "</p><br><br>"
-	this.Magnesium_x ="<p class = 'name'>Magnesium:</p>" +  "<p class = 'value'>" + Mag +  "</p><br><br>"
-	this.vitC = "<p class = 'name'>Vitamin C:</p>" +  "<p class = 'value'>" + vitC +  "</p><br><br>"
-	this.vitE = "<p class = 'name'>Vitamin E:</p>" +  "<p class = 'value'>" + vitE +  "</p><br><br>"
-	this.iron = "<p class = 'name'>Iron:</p>" + "<p class = 'value'>" + iron + "</p><br><br>"
+	this.D3 ="<li class = 'list-group-item'><b>Vitamin D3:</b> &nbsp&nbsp " + D3 + "</li>"
+	this.tumeric ="<li class = 'list-group-item'><b>Tumeric:</b> &nbsp&nbsp" + tumeric  +  "</li>"
+	this.bComplex ="<li class = 'list-group-item'><b>B Complex:</b> &nbsp&nbsp" + bComplex +  "</li>"
+	this.fish ="<li class = 'list-group-item'><b>Fish Oil:</b> &nbsp &nbsp" + fish +  "</li>"
+	this.Magnesium_x ="<li class = 'list-group-item'><b>Magnesium:</b> &nbsp &nbsp" + Mag +  "</li>"
+	this.vitC = "<li class = 'list-group-item'><b>Vitamin C:</b> &nbsp&nbsp" + vitC +  "</li>"
+	this.vitE = "<li class = 'list-group-item'><b>Vitamin E:</b> &nbsp&nbsp" + vitE +  "</li>"
+	this.iron = "<li class = 'list-group-item'><b>Iron:</b> &nbsp&nbsp" + iron + "</li>"
 	//food
-	this.food = "<p class = 'name'>Food:</p>" + "<p class = 'value'>" + food + "</p><br><br>"
+	this.food = "<li class = 'list-group-item'><b>Food:</b> &nbsp&nbsp" + food + "</li>"
 	//coffee
-	this.coffee = "<p class = 'name'>Coffee:</p>" + "<p class = 'value'>" + coffee + "</p><br><br>"
+	this.coffee = "<li class = 'list-group-item'><b>Coffee:</b>&nbsp&nbsp" + coffee + "</li>"
 	//water	
-	this.bottled = "<p class = 'name'>Bottled Water:</p>" +  "<p class = 'value'>" + bottled +  "</p><br><br>"
-	this.tap = "<p class = 'name'>Tap Water:</p>" +  "<p class = 'value'>" + tap +  "</p><br><br>"
+	this.bottled = "<li class = 'list-group-item'><b>Bottled Water:</b>&nbsp&nbsp" + bottled +  "</li>"
+	this.tap = "<li class = 'list-group-item'><b>Tap Water:</b>&nbsp&nbsp" + tap +  "</li>"
 	//alcohol
-	this.alcohol = "<p class = 'name'>Alcohol:</p>" +  "<p class = 'value'>" + alcohol +  "</p><br><br>"
-	this.notes = "<p class = 'name'>Notes:</p>" +  "<p class = 'value'>" + notes + "</p><br><br>"
+	this.alcohol = "<li class = 'list-group-item'><b>Alcohol:</b>&nbsp&nbsp" +  alcohol +  "</li>"
+	//notes
+	this.notes = "<li class = 'list-group-item'><b>Notes:</b>&nbsp&nbsp" +  notes + "</li>"
 	//break
 	this.x = "<br>"
 }
