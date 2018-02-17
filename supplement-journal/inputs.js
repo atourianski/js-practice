@@ -2,7 +2,7 @@ var results = [];
 
 window.onload = function(){
 
-function day(D3, tumeric, bComplex, fish, Mag, vitC, vitE, iron, food, coffee, bottled, tap, alcohol, notes){
+function day(D3, tumeric, bComplex, fish, Mag, vitC, vitE, iron, food, coffee, bottled, tap, alcohol, exercise, notes){
 	
 	//date
 	this.xDay = "<h3 id = 'todaysDate'>" + new Date().toDateString() + "</h3>"
@@ -24,6 +24,7 @@ function day(D3, tumeric, bComplex, fish, Mag, vitC, vitE, iron, food, coffee, b
 	this.tap = "<li class = 'list-group-item'><b>Tap Water:</b>&nbsp&nbsp" + tap +  "</li>"
 	//alcohol
 	this.alcohol = "<li class = 'list-group-item'><b>Alcohol:</b>&nbsp&nbsp" +  alcohol +  "</li>"
+	this.exercise = "<li class = 'list-group-item'><b>Exercise:</b>&nbsp&nbsp" + exercise + "</li>"
 	//notes
 	this.notes = "<li class = 'list-group-item'><b>Notes:</b>&nbsp&nbsp" +  notes + "</li>"
 	//break
@@ -50,8 +51,9 @@ var j = document.getElementById("coffee").value;
 var k = document.getElementById("bottled").value;
 var l = document.getElementById("tap").value;
 var m = document.getElementById("alcohol").value;
-var n = document.getElementById("notes").value;
-var today = new day(a,b,c,d,e,f,g,h,i,j,k,l,m,n);
+var n = document.getElementById("exercise").value;
+var o = document.getElementById("notes").value;
+var today = new day(a,b,c,d,e,f,g,h,i,j,k,l,m,n,o);
 results.push(today);
 console.log(results);
 	function storeDay(key, value){
